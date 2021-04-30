@@ -1,6 +1,26 @@
-body {
-    background-color: black;
-    font-size: 21px;
-    color: white;
+@import "vars";
+@import "vendor/reset.scss";
+@font-face {
+    font-family: 'Gilroy';
+    src: local('Gilroy Regular'), local('Gilroy-Regular'),
+        url('Gilroy-Regular.woff2') format('woff2'),
+        url('Gilroy-Regular.woff') format('woff'),
+        url('Gilroy-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+
+html { //для работы с rem
+    font-size: 62.5%; //это 10px относитеельно стандартого размера браузера
+    font-family: 'Gilroy';
 }
-@import "../node_modules/bootstrap/scss/bootstrap";
+body {
+    background-color: $white;
+    font-size: 21px;
+    color: $black;
+}
+
+@import "blocks/container.scss";
+@import "blocks/header.scss";
+
+@import "blocks/nav.scss";

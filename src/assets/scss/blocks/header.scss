@@ -1,0 +1,10 @@
+header{
+    .header__preview{
+        height: 58rem;
+        // overflow: hidden;
+        .header__photo{
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
