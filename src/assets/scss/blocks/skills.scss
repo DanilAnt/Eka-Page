@@ -1,0 +1,28 @@
+.skills{
+    margin-bottom: 16rem;
+    .skills__list{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        .skills__item{
+            width: 100%;
+            margin-bottom: 4rem;
+        }
+        & .skills__item:nth-child(even){
+            width: 50%;
+        }
+        & .skills__item:last-child{
+            margin-bottom: 0;
+        }
+    }
+    .skills__name{
+        font-size: $h3;
+        line-height: 2;
+        border-bottom: 1px solid $grey;
+        margin-bottom: 2rem;
+    }
+    .skills__content{
+        font-size: $h4;
+        line-height: 1.5;
+    }
+}

@@ -1,0 +1,24 @@
+.fig-1{
+    margin: 0 auto;
+    position: absolute;
+    z-index: 0;
+    width: 52rem; 
+    height: 17rem;
+    background: transparent;
+    border: 1px solid $grey;
+    border-radius: 26rem/8.5rem;
+    font-size: 0;
+    transform: rotate(-40deg);
+}
+.fig-2{
+    margin: 0 auto;
+    position: absolute;
+    z-index: 0;
+    width: 46rem; 
+    height: 20rem;
+    background: transparent;
+    border: 1px solid $grey;
+    border-radius: 23rem/10rem;
+    font-size: 0;
+    transform: rotate(40deg);
+}

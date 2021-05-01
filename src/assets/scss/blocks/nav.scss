@@ -1,13 +1,73 @@
 .nav{
     height: 10.8rem;
     font-size: 2rem;
+    position: relative;
+    @include bp($md){
+        //display: flex;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        width: 100%;
+        flex-direction: column;
+        height: auto;
+        background-color: $white;
+    }
     .nav__list{
         display: flex;
         align-items: center;
         justify-content: center;
         height: 100%;
+        @include bp($md){
+            display: none;
+            font-size: $mh1;
+            .show-sidebar &{
+            display: flex;
+            flex-direction: column;
+            background-color: $white;
+            }
+            @include bp($sm){
+                font-size: $h3;
+            }
+        }
         .nav__item{
-            padding: 0 2rem;
+            padding: 1rem 2rem;
+            transition: all 0.2s linear;
+            position: relative;
+            &--social{
+                display: none;
+            }
+            @include bp($md){
+                width: 100%;
+                padding: 3rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                &--social{
+                    display: flex;
+                }
+                @include bp($sm){
+                    padding: 1.8rem;
+                }
+            }
+            
+            &:after{
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                z-index: 1;
+                width: 0;
+                height: 0.1rem;
+                background-color: $grey;
+                transition: all 0.2s linear;
+            }
+            &:hover:after{
+                width: 100%;
+            }
+            &:hover{
+                color: $grey;
+            }
         }
     }
 }

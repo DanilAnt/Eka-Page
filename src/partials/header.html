@@ -1,7 +1,11 @@
-<header>
-    
+<!-- header -->
+<header> 
     <div class="container">
         <nav class="nav">
+            <div class="burger__block">
+                <span class="burger">
+                </span>
+            </div>
             <ul class="nav__list">
                 <li class="nav__item">
                     <a class="nav__link" href="">About</a>
@@ -15,12 +19,52 @@
                 <li class="nav__item">
                     <a class="nav__link" href="">Contact</a>
                 </li>
+                <li class="nav__item nav__item--social">
+                    <ul class="social">
+                        <li class="social__item">
+                            <a class="social__link" href="#">
+                                <svg class="social__icon">
+                                    <use href="#inst"></use>
+                                </svg>
+                            </a>
+                        </li>
+        
+                        <li class="social__item">
+                            <a class="social__link" href="#">
+                                <svg class="social__icon">
+                                    <use href="#be"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        
+                        <li class="social__item">
+                            <a class="social__link" href="#">
+                                <svg class="social__icon">
+                                    <use href="#tg"></use>
+                                </svg>
+                            </a>
+                        </li>
+                </li>
             </ul>
+
         </nav>
         <div class="header__preview">
-            <img class="header__photo" src="assets/images/header_photo.png" alt="">
+            <img class="header__photo" src="assets/images/header-photo.jpg" alt="">
+            <div class="header__description">
+                <div class="header__description--top_block">
+                    <p class="header__description--profession">UX/UI designer</p>
+                    <p class="header__description--name">Ekaterina</p>
+                </div>
+                <div class="header__description-bottom-block">
+                    <p class="header__description--surname">Ermoshchikova</p>
+                </div>
+            </div>
+        </div>
+        <div class="header__slide-down">
+            <button class="btn btn--rounded" type="button">
+                &darr;
+            </button>
         </div>
     </div>
-
-
 </header>
+<!-- /header -->
