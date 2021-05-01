@@ -369,7 +369,7 @@ a {
 
 @font-face {
     font-family: 'Gilroy';
-  src: local("Gilroy Regular"), local("Gilroy-Regular"), url("assets/fonts/Gilroy-Regular.woff2") format("woff2"), url("assets/fonts/Gilroy-Regular.woff") format("woff"), url("assets/fonts/Gilroy-Regular.ttf") format("truetype");
+  src: local("Gilroy Regular"), local("Gilroy-Regular"), url("../fonts/Gilroy-Regular.woff2") format("woff2"), url("../fonts/Gilroy-Regular.woff") format("woff"), url("../fonts/Gilroy-Regular.woff2") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
@@ -392,14 +392,70 @@ body {
     margin: 0 auto;
 }
 
+header {
+    margin-bottom: 15rem;
+}
+
 header .header__preview {
     height: 58rem;
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    overflow: hidden;
+    position: relative;
 }
 
 header .header__preview .header__photo {
     height: 100%;
+    width: 100%;
     -o-object-fit: cover;
     object-fit: cover;
+}
+
+header .header__preview .header__description {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    right: 0;
+    margin-right: 1.6rem;
+    margin-bottom: 2.5rem;
+    line-height: 1;
+    color: #f9f9f9;
+}
+
+header .header__preview .header__description--top_block {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    margin-bottom: 2.5rem;
+}
+
+header .header__preview .header__description--profession {
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+}
+
+header .header__preview .header__description--name, header .header__preview .header__description--surname {
+    font-size: 9.2rem;
+}
+
+header .header__slide-down {
+    display: -ms-flexbox;
+    display: flex;
+    margin: 1.5rem 0;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
 }
 
 .nav {
@@ -419,4 +475,84 @@ header .header__preview .header__photo {
 
 .nav .nav__list .nav__item {
     padding: 0 2rem;
+}
+
+.about {
+    position: relative;
+    margin-bottom: 16rem;
+}
+
+.about .about__bgground {
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding-top: 18rem;
+}
+
+.about .about__content {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+}
+
+.about .about__content .about__header {
+    z-index: 10;
+    font-size: 7.5rem;
+    margin-bottom: 9.5rem;
+}
+
+.about .about__content .about__description {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.about .about__content .about__description .about__item {
+    width: 55%;
+}
+
+.about .about__content .about__description .about__item--photo {
+    width: 45%;
+    position: relative;
+}
+
+.about .about__content .about__description .about__item--photo img {
+    position: absolute;
+}
+
+.about .about__content .about__description .about__item--photo:last-child img {
+    position: static;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.about .about__content .about__description .about__text {
+    font-size: 2rem;
+    color: #1d1d1d;
+    line-height: 1.5;
+    padding-right: 3rem;
+    margin-bottom: 6rem;
+}
+
+.fig-1 {
+    margin: 0 auto;
+    position: absolute;
+    z-index: 0;
+    width: 52rem;
+    height: 17rem;
+    background: transparent;
+    border: 1px solid #939393;
+    border-radius: 26rem/8.5rem;
+    font-size: 0;
+    -webkit-transform: rotate(-40deg);
+    transform: rotate(-40deg);
 }
