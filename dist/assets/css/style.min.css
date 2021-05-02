@@ -730,7 +730,8 @@ header {
   border: 1px solid #939393;
   border-radius: 26rem/8.5rem;
   font-size: 0;
-  transform: rotate(-40deg); }
+  transform: rotate(-40deg);
+  transition: all 0.4s linear; }
 
 .fig-2 {
   margin: 0 auto;
@@ -742,7 +743,8 @@ header {
   border: 1px solid #939393;
   border-radius: 23rem/10rem;
   font-size: 0;
-  transform: rotate(40deg); }
+  transform: rotate(40deg);
+  transition: all 0.4s linear; }
   @media (max-width: 576px) {
     .fig-2 {
       width: 34rem;
