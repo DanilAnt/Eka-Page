@@ -364,6 +364,10 @@ body {
     .container {
       padding-left: 6rem;
       padding-right: 6rem; } }
+  @media (max-width: 768px) {
+    .container {
+      padding-left: 3rem;
+      padding-right: 3rem; } }
   @media (max-width: 576px) {
     .container {
       padding-left: 1.5rem;
@@ -377,10 +381,23 @@ header {
     object-fit: cover;
     overflow: hidden;
     position: relative; }
+    @media (max-width: 768px) {
+      header .header__preview {
+        display: flex;
+        justify-content: center; } }
+  @media (max-width: 768px) and (max-width: 576px) {
+    header .header__preview {
+      height: 36rem; } }
     header .header__preview .header__photo {
       height: 100%;
       width: 100%;
       object-fit: cover; }
+      @media (max-width: 768px) {
+        header .header__preview .header__photo {
+          margin-left: 6rem;
+          object-fit: scale-down;
+          width: auto;
+          height: 100%; } }
     header .header__preview .header__description {
       display: flex;
       flex-direction: column;
@@ -404,11 +421,17 @@ header {
         @media (max-width: 991px) {
           header .header__preview .header__description--profession {
             font-size: 2rem; } }
+        @media (max-width: 576px) {
+          header .header__preview .header__description--profession {
+            font-size: 1.6rem; } }
       header .header__preview .header__description--name, header .header__preview .header__description--surname {
         font-size: 9.2rem; }
         @media (max-width: 991px) {
           header .header__preview .header__description--name, header .header__preview .header__description--surname {
             font-size: 6.8rem; } }
+        @media (max-width: 576px) {
+          header .header__preview .header__description--name, header .header__preview .header__description--surname {
+            font-size: 4rem; } }
   header .header__slide-down {
     display: flex;
     margin: 1.5rem 0;
@@ -427,7 +450,7 @@ header {
       display: flex; } }
   @media (max-width: 576px) {
     .burger__block {
-      height: 7rem; } }
+      height: 6rem; } }
   .burger__block .burger {
     cursor: pointer;
     position: relative;
@@ -437,11 +460,13 @@ header {
     height: 0.4rem;
     width: 5rem;
     background-color: black;
-    border-radius: 0.2rem;
+    border-radius: 0.3rem;
     transition: all 0.2s linear; }
     @media (max-width: 576px) {
       .burger__block .burger {
-        margin-right: 1.5rem; } }
+        margin-right: 1.5rem;
+        height: 0.3rem;
+        width: 3rem; } }
     .burger__block .burger:after, .burger__block .burger:before {
       position: absolute;
       content: "";
@@ -451,19 +476,37 @@ header {
       background-color: black;
       border-radius: 0.2rem;
       transition: all 0.2s linear; }
+      @media (max-width: 576px) {
+        .burger__block .burger:after, .burger__block .burger:before {
+          height: 0.3rem;
+          width: 3rem; } }
     .burger__block .burger:after {
       top: 1.5rem; }
+      @media (max-width: 576px) {
+        .burger__block .burger:after {
+          top: 1rem; } }
     .burger__block .burger:before {
       bottom: 1.5rem; }
+      @media (max-width: 576px) {
+        .burger__block .burger:before {
+          bottom: 1rem; } }
   .show-sidebar .burger__block .burger {
     width: 0;
     transform: translateX(-6rem); }
     .show-sidebar .burger__block .burger:after {
       width: 3.5rem;
       transform: rotate(45deg) translateY(-2.1rem); }
+      @media (max-width: 576px) {
+        .show-sidebar .burger__block .burger:after {
+          width: 3rem;
+          transform: rotate(45deg) translateY(-1.4rem); } }
     .show-sidebar .burger__block .burger:before {
       width: 3.5rem;
       transform: rotate(-45deg) translateY(2.1rem); }
+      @media (max-width: 576px) {
+        .show-sidebar .burger__block .burger:before {
+          width: 3rem;
+          transform: rotate(-45deg) translateY(1.4rem); } }
 
 .btn {
   display: flex;
@@ -485,7 +528,7 @@ header {
   position: relative; }
   @media (max-width: 768px) {
     .nav {
-      position: fixed;
+      display: flex;
       top: 0;
       left: 0;
       z-index: 1000;

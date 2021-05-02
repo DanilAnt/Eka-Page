@@ -6,11 +6,25 @@ header{
         object-fit: cover;
         overflow: hidden;
         position: relative;
+        @include bp($md){
+            display: flex;
+            justify-content: center;
+            @include bp($sm){
+                height: 36rem;
+            }
+        }
         
         .header__photo{
             height: 100%;
             width: 100%;
             object-fit: cover;
+            @include bp($md){
+                margin-left: 6rem;
+                object-fit: scale-down;
+                width: auto;
+                height: 100%;
+
+            }
         }
         .header__description{
             display: flex;
@@ -36,11 +50,17 @@ header{
                 @include bp($lg){
                     font-size: $h4;
                 }
+                @include bp($sm){
+                    font-size: $mh4;
+                }
             }
             &--name, &--surname{
                 font-size: $h1;
                 @include bp($lg){
                     font-size: $th1;
+                }
+                @include bp($sm){
+                    font-size: $mh1;
                 }
             }
         }

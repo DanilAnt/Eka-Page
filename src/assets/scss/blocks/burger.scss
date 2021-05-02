@@ -9,7 +9,7 @@
     height: 12rem;
     color: black;
     @include bp($sm){
-        height: 7rem;
+        height: 6rem;
     }
     .burger{
         cursor: pointer;
@@ -20,10 +20,12 @@
         height: 0.4rem;
         width: 5rem;
         background-color: black;
-        border-radius: 0.2rem;
+        border-radius: 0.3rem;
         transition: all 0.2s linear;
         @include bp($sm){
             margin-right: 1.5rem;
+            height: 0.3rem;
+            width: 3rem;
         }
 
         &:after, &:before{
@@ -35,12 +37,23 @@
             background-color: black; 
             border-radius: 0.2rem;
             transition: all 0.2s linear;
+            @include bp($sm){
+                height: 0.3rem;
+                width: 3rem;
+            }
+            
         }
         &:after{
             top: 1.5rem;
+            @include bp($sm){
+                top: 1rem;
+            }
         }
         &:before{
             bottom: 1.5rem;
+            @include bp($sm){
+                bottom: 1rem;
+            }
         }
     }
     .show-sidebar &{
@@ -50,10 +63,18 @@
             &:after{
                 width: 3.5rem;
                 transform: rotate(45deg) translateY(-2.1rem);
+                @include bp($sm){
+                    width: 3rem;
+                    transform: rotate(45deg) translateY(-1.4rem);
+                }
             }
             &:before{
                 width: 3.5rem;
                 transform: rotate(-45deg) translateY(2.1rem);
+                @include bp($sm){
+                    width: 3rem;
+                    transform: rotate(-45deg) translateY(1.4rem);
+                }
             }
         }
     }
