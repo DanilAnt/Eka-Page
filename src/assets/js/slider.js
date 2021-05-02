@@ -6,7 +6,7 @@ $(function(){
 		  slidesToScroll: 1,
 		  arrows: true,
 		  dots: false,
-		  
+		  adaptiveHeight: true,
           prevArrow: $("#btn-left"),
           nextArrow: $("#btn-right"),
 		});

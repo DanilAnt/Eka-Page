@@ -1,6 +1,9 @@
 .nav{
     height: 11.8rem;
     font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative;
     position: fixed;
     top: 0;
@@ -8,15 +11,25 @@
     z-index: 1000;
     width: 100%;
     background-color: rgba($color: $white, $alpha: .95);
+    transition: all 0.2s linear;
+    .show-sidebar &{
+        background-color: rgba($color: $white, $alpha: 1);
+    }
     @include bp($md){
         flex-direction: column;
         height: auto;
+    }
+    @media (max-height:500px) {
+        max-height: 6rem;
     }
     .nav__list{
         display: flex;
         align-items: center;
         justify-content: center;
         height: 100%;
+        .show-sidebar &{
+            background-color: rgba($color: $white, $alpha: 1);
+        }
         @include bp($md){
             display: flex;
             flex-direction: column;
@@ -37,6 +50,9 @@
                     top: 6rem;
                 }
             }
+            @media (max-height:500px) {
+                top: 6rem;
+            }
             }
             @include bp($sm){
                 font-size: $h3;
@@ -53,6 +69,7 @@
             }
             @include bp($md){
                 background-color: rgba($color: $white, $alpha: .95);
+                
                 border: none;
                 width: 100%;
                 padding: 3rem;
@@ -67,6 +84,10 @@
                     
                 } 
                 
+            }
+            @media (max-height:610px) {
+                padding-top: 1.5rem;
+                padding-bottom: 1.5rem;
             }
             @media (max-height:450px) {
                 padding-top: 0.6rem;

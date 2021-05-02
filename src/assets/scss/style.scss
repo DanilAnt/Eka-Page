@@ -19,6 +19,27 @@ body {
     background-color: $white;
     font-size: 21px;
     color: $black;
+    
+    .mask{
+        display: none;
+
+    }
+    @include bp($md){
+        &.show-sidebar{
+            overflow: hidden;
+            .mask{
+                display: block;
+                position: fixed;
+                top: 0;
+                left: 0;
+                z-index: 100;
+                width: 100vw;
+                height: 100vh;
+                background-color: rgba($color: $black, $alpha: .6);
+            }
+        }
+    }            
+    
     .h1{
         font-size: $h2;
         color: $black;

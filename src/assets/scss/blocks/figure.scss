@@ -1,31 +1,31 @@
-.fig-1{
+.fig{
     margin: 0 auto;
     position: absolute;
     z-index: 0;
-    width: 52rem; 
-    height: 17rem;
     background: transparent;
     border: 1px solid $grey;
-    border-radius: 26rem/8.5rem;
-    font-size: 0;
     transform: rotate(-40deg);
-    transition: all 0.4s linear;
-}
-.fig-2{
-    margin: 0 auto;
-    position: absolute;
-    z-index: 0;
-    width: 46rem; 
-    height: 20rem;
-    background: transparent;
-    border: 1px solid $grey;
-    border-radius: 23rem/10rem;
+    transition: all 0.8s linear;
     font-size: 0;
-    transform: rotate(40deg);
-    transition: all 0.4s linear;
-    @include bp($sm){
-        width: 34rem; 
-        height: 16rem;
-        border-radius: 17rem/8rem;
+    &--1{
+        width: 52rem; 
+        height: 17rem;
+        border-radius: 26rem/8.5rem;
     }
+    &--2{
+        width: 46rem; 
+        height: 20rem;
+        border-radius: 23rem/10rem;
+        @include bp($sm){
+            width: 34rem; 
+            height: 16rem;
+            border-radius: 17rem/8rem;
+        }
+    }
+    &.rotate{
+        transform: rotate(140deg);
+    }
+}
+.rotate{
+    transform: rotate(140deg);
 }
