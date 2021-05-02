@@ -7,11 +7,17 @@
     justify-content: flex-end;
     align-items: center;
     height: 12rem;
-    color: black;
+    color: $black;
     @include bp($sm){
         height: 6rem;
     }
     .burger{
+        height: 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+    }
+    .burger__element{
         cursor: pointer;
         position: relative;
         font-size: 1rem;
@@ -19,9 +25,13 @@
         display: block;
         height: 0.4rem;
         width: 5rem;
-        background-color: black;
+        background-color: $black;
         border-radius: 0.3rem;
         transition: all 0.2s linear;
+        @include bp($md){
+            margin-right: 3rem;
+        }
+
         @include bp($sm){
             margin-right: 1.5rem;
             height: 0.3rem;
@@ -34,7 +44,7 @@
             display: block;
             height: 0.4rem;
             width: 5rem;
-            background-color: black; 
+            background-color: $black; 
             border-radius: 0.2rem;
             transition: all 0.2s linear;
             @include bp($sm){
@@ -57,7 +67,7 @@
         }
     }
     .show-sidebar &{
-        .burger{
+        .burger__element{
             width: 0;
             transform: translateX(-6rem);
             &:after{

@@ -47,28 +47,29 @@
     
     <title>EkaPage</title>
 </head>
-<body class="show-sidebar">
+<body class="">
 <page>
     <!-- header -->
     <header> 
         <div class="container">
-            <nav class="nav">
+            <nav class="nav" id="nav">
                 <div class="burger__block">
-                    <span class="burger">
-                    </span>
+                    <div class="burger" id="burger">
+                      <span class="burger__element"></span>
+                    </div>
                 </div>
                 <ul class="nav__list">
-                    <li class="nav__item">
-                        <a class="nav__link" href="">About</a>
+                    <li class="nav__item" data-scroll="about">
+                        <div class="nav__link"  >About</div>
                     </li>
-                    <li class="nav__item">
-                        <a class="nav__link" href="">Skills</a>
+                    <li class="nav__item" data-scroll="skills">
+                        <div class="nav__link" >Skills</div>
                     </li>
-                    <li class="nav__item">
-                        <a class="nav__link" href="">Portfolio</a>
+                    <li class="nav__item"  data-scroll="portfolio">
+                        <div class="nav__link">Portfolio</div>
                     </li>
-                    <li class="nav__item">
-                        <a class="nav__link" href="">Contact</a>
+                    <li class="nav__item" data-scroll="contacts">
+                        <div class="nav__link" >Contact</div>
                     </li>
                     <li class="nav__item nav__item--social">
                         <ul class="social">
@@ -112,7 +113,7 @@
                 </div>
             </div>
             <div class="header__slide-down">
-                <button class="btn btn--rounded" type="button">
+                <button class="btn btn--rounded" type="button" data-scroll="about">
                     &darr;
                 </button>
             </div>
@@ -123,7 +124,7 @@
     
     <!-- about -->
     <div class="container">
-        <div class="about">
+        <div class="about" id="about">
                 <div class="about__bgground">
                     <span class="fig-1">Ellips</span>
                 </div>
@@ -156,8 +157,9 @@
     <!-- /about -->
     
     <!-- Skills -->
-    <div class="skills">
-        <div class="container">
+    <div class="container">
+    <div class="skills" id="skills">
+        
             <h1 class="skills__header h1">Skills.</h1>
             <ul class="skills__list">
                 <li class="skills__item">
@@ -187,7 +189,7 @@
     <!-- /Skills -->
     
     <!-- portfolio -->
-    <div class="portfolio">
+    <div class="portfolio" id="portfolio">
         <div class="container">
             <h1 class="portfolio__header h1">Portfolio.</h1>
             <ul class="portfolio__preview">
@@ -209,7 +211,7 @@
     
     <!-- contacts -->
     <div class="container">
-        <div class="contacts">
+        <div class="contacts" id="contacts">
             <h1 class="contacts__header h1">Contacts</h1>
             <div class="contacts__bgground">
                 <span class="fig-2">Ellips</span>

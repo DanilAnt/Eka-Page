@@ -23,6 +23,10 @@ header{
                 object-fit: scale-down;
                 width: auto;
                 height: 100%;
+                @include bp($sm){
+                    margin-left: 0rem;
+    
+                }
 
             }
         }
@@ -72,10 +76,12 @@ header{
         align-items: center;
 
     }
+    margin-top: 11.8rem;
     margin-bottom: 15rem;
     @include bp($md){
         margin-bottom: 12rem;
         @include bp($sm){
+            margin-top: 6rem;
             margin-bottom: 8rem;
         }
     }

@@ -1,23 +1,24 @@
 <!-- header -->
 <header> 
     <div class="container">
-        <nav class="nav">
+        <nav class="nav" id="nav">
             <div class="burger__block">
-                <span class="burger">
-                </span>
+                <div class="burger" id="burger">
+                  <span class="burger__element"></span>
+                </div>
             </div>
             <ul class="nav__list">
-                <li class="nav__item">
-                    <a class="nav__link" href="">About</a>
+                <li class="nav__item" data-scroll="about">
+                    <div class="nav__link"  >About</div>
                 </li>
-                <li class="nav__item">
-                    <a class="nav__link" href="">Skills</a>
+                <li class="nav__item" data-scroll="skills">
+                    <div class="nav__link" >Skills</div>
                 </li>
-                <li class="nav__item">
-                    <a class="nav__link" href="">Portfolio</a>
+                <li class="nav__item"  data-scroll="portfolio">
+                    <div class="nav__link">Portfolio</div>
                 </li>
-                <li class="nav__item">
-                    <a class="nav__link" href="">Contact</a>
+                <li class="nav__item" data-scroll="contacts">
+                    <div class="nav__link" >Contact</div>
                 </li>
                 <li class="nav__item nav__item--social">
                     <ul class="social">
@@ -61,7 +62,7 @@
             </div>
         </div>
         <div class="header__slide-down">
-            <button class="btn btn--rounded" type="button">
+            <button class="btn btn--rounded" type="button" data-scroll="about">
                 &darr;
             </button>
         </div>

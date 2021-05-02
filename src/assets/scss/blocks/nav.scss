@@ -1,17 +1,16 @@
 .nav{
-    height: 10.8rem;
+    height: 11.8rem;
     font-size: 2rem;
     position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    background-color: rgba($color: $white, $alpha: .95);
     @include bp($md){
-        display: flex;
-        //position: fixed;
-        top: 0;
-        left: 0;
-        z-index: 1000;
-        width: 100%;
         flex-direction: column;
         height: auto;
-        background-color: $white;
     }
     .nav__list{
         display: flex;
@@ -19,12 +18,25 @@
         justify-content: center;
         height: 100%;
         @include bp($md){
-            display: none;
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            height: auto;
+            width: 100%;
+            transition: all 0.4s ease-in-out;
+            top: -100vh;
+            
             font-size: $mh1;
+            
             .show-sidebar &{
             display: flex;
             flex-direction: column;
-            background-color: $white;
+            @include bp($md){
+                top: 11.8rem;
+                @include bp($sm){
+                    top: 6rem;
+                }
+            }
             }
             @include bp($sm){
                 font-size: $h3;
@@ -34,10 +46,13 @@
             padding: 1rem 2rem;
             transition: all 0.2s linear;
             position: relative;
+            background-color: transparent;
             &--social{
                 display: none;
             }
             @include bp($md){
+                background-color: rgba($color: $white, $alpha: .95);
+                border: none;
                 width: 100%;
                 padding: 3rem;
                 display: flex;
