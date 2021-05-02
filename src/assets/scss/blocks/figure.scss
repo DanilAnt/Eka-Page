@@ -21,4 +21,9 @@
     border-radius: 23rem/10rem;
     font-size: 0;
     transform: rotate(40deg);
+    @include bp($sm){
+        width: 34rem; 
+        height: 16rem;
+        border-radius: 17rem/8rem;
+    }
 }

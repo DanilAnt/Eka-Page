@@ -1,11 +1,21 @@
 .contacts{
     position: relative;
+    margin-bottom: 15rem;
+    @include bp($sm){
+        margin-bottom: 8rem;
+    }
+    .contacts__header{
+        margin-bottom: 12rem;
+        @include bp($sm){
+            margin-bottom: 8rem;
+        }
+    }
     .contacts__bgground{
         width: 100%;
         height: 100%;
         position: absolute;
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         justify-content: center;
         z-index: 1;
     }
@@ -18,6 +28,9 @@
         align-items: center;
         color: $black;
         font-size: $h3;
+        @include bp($sm){
+            font-size: $mh4;
+        }
 
         .contacts__tel, .contacts__mail{
             transition: all 0.2s linear;

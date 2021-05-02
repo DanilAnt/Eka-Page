@@ -1,5 +1,11 @@
 .skills{
     margin-bottom: 16rem;
+    @include bp($md){
+        margin-bottom: 12rem;
+        @include bp($sm){
+            margin-bottom: 8rem;
+        }
+    }
     .skills__list{
         display: flex;
         flex-direction: column;
@@ -7,9 +13,15 @@
         .skills__item{
             width: 100%;
             margin-bottom: 4rem;
+            @include bp($sm){
+                margin-bottom: 3rem;
+            }
         }
         & .skills__item:nth-child(even){
             width: 50%;
+            @include bp($sm){
+                width: 100%;
+            }
         }
         & .skills__item:last-child{
             margin-bottom: 0;
@@ -20,9 +32,15 @@
         line-height: 2;
         border-bottom: 1px solid $grey;
         margin-bottom: 2rem;
+        @include bp($sm){
+            font-size: $h4;
+        }
     }
     .skills__content{
         font-size: $h4;
         line-height: 1.5;
+        @include bp($sm){
+            font-size: $mh4;
+        }
     }
 }

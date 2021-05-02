@@ -23,6 +23,15 @@ body {
         font-size: $h2;
         color: $black;
         margin-bottom: 9.5rem;
+        @include bp($md){
+            margin-bottom: 6.5rem;
+            font-size: $th2;
+            @include bp($sm){
+                margin-bottom: 4rem;
+                font-size: $h3;
+                
+            }   
+        }   
     }
     // page{
     //     width: 100vw;

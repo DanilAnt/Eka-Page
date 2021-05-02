@@ -29,3 +29,21 @@
         }
     }
 }
+.contacts{
+    @include bp($sm){
+        .social__item{
+            width: 2.5rem;
+            height: 2.5rem;
+            margin: 0 1.4rem;
+            .social__icon{
+                width: 2rem;
+                height: 2rem;
+                fill: $black;
+
+                transition: all 0.2s linear;
+                
+            }
+        }
+    
+    }    
+}

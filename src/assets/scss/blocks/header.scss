@@ -73,4 +73,11 @@ header{
 
     }
     margin-bottom: 15rem;
+    @include bp($md){
+        margin-bottom: 12rem;
+        @include bp($sm){
+            margin-bottom: 8rem;
+        }
+    }
+    
 }

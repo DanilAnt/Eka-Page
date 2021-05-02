@@ -2,6 +2,12 @@
     position: relative;
     margin-bottom: 16rem;
     overflow: hidden;
+    @include bp($md){
+        margin-bottom: 12rem;
+        @include bp($sm){
+            margin-bottom: 8rem;
+        }
+    }
     .about__bgground{
         position: absolute;
         z-index: 0;
@@ -10,6 +16,9 @@
         display: flex;
         justify-content: center;
         padding-top: 18rem;
+        @include bp($sm){
+            display: none;
+        }
         
     }
     .about__content{
@@ -21,13 +30,46 @@
         .about__description{
             display: flex;
             flex-wrap: wrap;
+            @include bp($md){
+                flex-direction: column;
+                &:nth-child(even){
+                    display: flex;
+                    justify-content: flex-end;
+                }
+                
+            }
             .about__item{
                 width: 55%;
+                @include bp($md){
+                    width: 100%;
+                    margin-bottom: 3.5rem;
+                    &:nth-child(even){
+                        display: flex;
+                        justify-content: flex-end;
+                    }
+
+                }
                 &--photo{
                     width: 45%;
+                    height: 34rem;
                     position: relative;
+                    @include bp($md){
+                        width: 100%;
+                        height: 26rem;
+                        
+                    }
                     img{
-                      position: absolute;  
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        position: absolute; 
+                        @include bp($md){
+                            width: 70%;
+                            height: 100%;
+                            @include bp($sm){
+                                width: 100%;
+                            }   
+                        } 
                     }
                     &:last-child{
                         img{
@@ -35,6 +77,13 @@
                             width: 100%;
                             height: 100%;
                             object-fit: cover;
+                            @include bp($md){
+                                width: 70%;
+                                @include bp($sm){
+                                    width: 100%;
+                                    
+                                }   
+                            } 
                           }
                     }
                 }
@@ -45,6 +94,12 @@
                 line-height: 1.5;
                 padding-right: 3rem;
                 margin-bottom: 6rem;
+                @include bp($md){
+                    margin-bottom: 0;
+                } 
+                @include bp($sm){
+                    font-size: $mh4;
+                } 
             }
         }
     }
