@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/assets/js/app.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = 0);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -93,7 +93,29 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("const navItems = document.querySelectorAll('[data-scroll]');\r\nconst body = document.body;\r\nconst nav = document.getElementById('nav');\r\nconst burger = document.getElementById('burger')\r\n\r\n\r\n// скролл до нужного места\r\nnavItems.forEach(item => {\r\n    item.addEventListener('click', event => {\r\n        let $this = event.currentTarget;\r\n        let targetId = $this.getAttribute('data-scroll');\r\n        topOffset = nav.offsetHeight;\r\n        let scrollTarget = document.getElementById(targetId);\r\n        let targetPosition = scrollTarget.getBoundingClientRect().top;\r\n        window.scrollBy({\r\n            top: targetPosition-topOffset ,\r\n            behavior: 'smooth'\r\n        });\r\n        body.classList.remove('show-sidebar');\r\n    });\r\n});\r\n\r\n//нажатие на бургер\r\nburger.addEventListener('click', event =>{\r\n    body.classList.toggle('show-sidebar');\r\n})\n\n//# sourceURL=webpack:///./src/assets/js/app.js?");
+eval("\r\nconst navItems = document.querySelectorAll('[data-scroll]');\r\nconst body = document.body;\r\nconst nav = document.getElementById('nav');\r\nconst burger = document.getElementById('burger');\r\nconst fig = document.getElementById('fig');\r\n\r\n\r\n// скролл до нужного места\r\nnavItems.forEach(item => {\r\n    item.addEventListener('click', event => {\r\n        let $this = event.currentTarget;\r\n        let targetId = $this.getAttribute('data-scroll');\r\n        let topOffset = nav.offsetHeight;\r\n        let scrollTarget = document.getElementById(targetId);\r\n        let targetPosition = scrollTarget.getBoundingClientRect().top;\r\n        // window.scrollBy({\r\n        //     top: targetPosition-topOffset ,\r\n        //     behavior: 'smooth'\r\n        // });\r\n        SmoothVerticalScrolling(targetPosition-topOffset, 300, 'top')\r\n        body.classList.remove('show-sidebar');\r\n      //  fig.style.transform = 'rotate(-210deg)';\r\n        \r\n    });\r\n});\r\n\r\n//нажатие на бургер\r\nburger.addEventListener('click', event =>{\r\n    body.classList.toggle('show-sidebar');\r\n})\r\n\r\n\r\n\r\n\r\n\r\n\r\n//scroll функции\r\nfunction SmoothVerticalScrolling(pos, time, where) {\r\n    let eAmt = pos / 100;\r\n    let curTime = 0;\r\n    while (curTime <= time) {\r\n        window.setTimeout(SVS_B, curTime, eAmt, where);\r\n        curTime += time / 100;\r\n    }\r\n}\r\nfunction SVS_B(eAmt, where) {\r\n    if(where == \"center\" || where == \"\")\r\n        window.scrollBy(0, eAmt / 2);\r\n    if (where == \"top\")\r\n        window.scrollBy(0, eAmt);\r\n}\r\n\r\n\n\n//# sourceURL=webpack:///./src/assets/js/app.js?");
+
+/***/ }),
+
+/***/ "./src/assets/js/slider.js":
+/*!*********************************!*\
+  !*** ./src/assets/js/slider.js ***!
+  \*********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("$(function(){\n    let slider=$(\"#portfolio-slider\");\n        slider.slick({\n\t\t  infinite: true,\n\t\t  slidesToShow: 1,\n\t\t  slidesToScroll: 1,\n\t\t  arrows: true,\n\t\t  dots: false,\n\t\t  \n          prevArrow: $(\"#btn-left\"),\n          nextArrow: $(\"#btn-right\"),\n\t\t});\n        \n    })\n\n//# sourceURL=webpack:///./src/assets/js/slider.js?");
+
+/***/ }),
+
+/***/ 0:
+/*!**************************************************************!*\
+  !*** multi ./src/assets/js/app.js ./src/assets/js/slider.js ***!
+  \**************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("__webpack_require__(/*! /Users/Danil/Desktop/visiting-site/Eka-Page/src/assets/js/app.js */\"./src/assets/js/app.js\");\nmodule.exports = __webpack_require__(/*! /Users/Danil/Desktop/visiting-site/Eka-Page/src/assets/js/slider.js */\"./src/assets/js/slider.js\");\n\n\n//# sourceURL=webpack:///multi_./src/assets/js/app.js_./src/assets/js/slider.js?");
 
 /***/ })
 

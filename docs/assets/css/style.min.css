@@ -582,7 +582,7 @@ header {
         height: auto;
         width: 100%;
         transition: all 0.4s ease-in-out;
-        top: -100vh;
+        top: -200vh;
         font-size: 4rem; }
         .show-sidebar .nav .nav__list {
           display: flex;
@@ -617,6 +617,10 @@ header {
   @media (max-width: 768px) and (max-width: 576px) {
     .nav .nav__list .nav__item {
       padding: 1.8rem; } }
+      @media (max-height: 450px) {
+        .nav .nav__list .nav__item {
+          padding-top: 0.6rem;
+          padding-bottom: 0.6rem; } }
       .nav .nav__list .nav__item:after {
         content: "";
         position: absolute;
@@ -730,7 +734,8 @@ header {
   border: 1px solid #939393;
   border-radius: 26rem/8.5rem;
   font-size: 0;
-  transform: rotate(-40deg); }
+  transform: rotate(-40deg);
+  transition: all 0.4s linear; }
 
 .fig-2 {
   margin: 0 auto;
@@ -742,7 +747,8 @@ header {
   border: 1px solid #939393;
   border-radius: 23rem/10rem;
   font-size: 0;
-  transform: rotate(40deg); }
+  transform: rotate(40deg);
+  transition: all 0.4s linear; }
   @media (max-width: 576px) {
     .fig-2 {
       width: 34rem;

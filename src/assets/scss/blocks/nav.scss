@@ -24,7 +24,7 @@
             height: auto;
             width: 100%;
             transition: all 0.4s ease-in-out;
-            top: -100vh;
+            top: -200vh;
             
             font-size: $mh1;
             
@@ -41,6 +41,7 @@
             @include bp($sm){
                 font-size: $h3;
             }
+            
         }
         .nav__item{
             padding: 1rem 2rem;
@@ -63,9 +64,14 @@
                 }
                 @include bp($sm){
                     padding: 1.8rem;
-                }
+                    
+                } 
+                
             }
-            
+            @media (max-height:450px) {
+                padding-top: 0.6rem;
+                padding-bottom: 0.6rem;
+            }
             &:after{
                 content: "";
                 position: absolute;
@@ -83,6 +89,7 @@
             &:hover{
                 color: $grey;
             }
+            
         }
     }
 }

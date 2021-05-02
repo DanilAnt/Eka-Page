@@ -9,6 +9,7 @@
     border-radius: 26rem/8.5rem;
     font-size: 0;
     transform: rotate(-40deg);
+    transition: all 0.4s linear;
 }
 .fig-2{
     margin: 0 auto;
@@ -21,6 +22,7 @@
     border-radius: 23rem/10rem;
     font-size: 0;
     transform: rotate(40deg);
+    transition: all 0.4s linear;
     @include bp($sm){
         width: 34rem; 
         height: 16rem;

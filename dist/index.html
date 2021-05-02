@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="assets/css/style.min.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     
     <!-- Useful meta tags -->
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -192,17 +193,20 @@
     <div class="portfolio" id="portfolio">
         <div class="container">
             <h1 class="portfolio__header h1">Portfolio.</h1>
-            <ul class="portfolio__preview">
+            <ul class="portfolio__preview" id="portfolio-slider">
+                <li class="portfolio__item">
+                    <img class="portfolio__photo" src="assets/images/portfolio/portfolio_photo-1.jpg" alt="">
+                </li>
                 <li class="portfolio__item">
                     <img class="portfolio__photo" src="assets/images/portfolio/portfolio_photo-1.jpg" alt="">
                 </li>
             </ul>
             <ul class="portfolio__buttons-block">
                 <li>
-                    <button class="btn" type="button">&larr;</button>
+                    <button class="btn" id="btn-left" type="button">&larr;</button>
                 </li>
                 <li>
-                    <button class="btn" type="button">&rarr;</button>
+                    <button class="btn" id="btn-right" type="button">&rarr;</button>
                 </li>
             </ul>
         </div>
@@ -253,6 +257,9 @@
 
     <footer></footer>
 </page>
-    <script src="assets/js/app.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+<script src="assets/js/app.js"></script>
 </body>
 </html>

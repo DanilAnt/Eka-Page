@@ -7,7 +7,7 @@ title: EkaPage
 <div class="container">
     <div class="about" id="about">
             <div class="about__bgground">
-                <span class="fig-1">Ellips</span>
+                <span class="fig-1" id="fig">Ellips</span>
             </div>
             <div class="about__content">
                 <h1 class="about__header h1">About.</h1>
@@ -73,17 +73,20 @@ title: EkaPage
 <div class="portfolio" id="portfolio">
     <div class="container">
         <h1 class="portfolio__header h1">Portfolio.</h1>
-        <ul class="portfolio__preview">
+        <ul class="portfolio__preview" id="portfolio-slider">
+            <li class="portfolio__item">
+                <img class="portfolio__photo" src="assets/images/portfolio/portfolio_photo-1.jpg" alt="">
+            </li>
             <li class="portfolio__item">
                 <img class="portfolio__photo" src="assets/images/portfolio/portfolio_photo-1.jpg" alt="">
             </li>
         </ul>
         <ul class="portfolio__buttons-block">
             <li>
-                <button class="btn" type="button">&larr;</button>
+                <button class="btn" id="btn-left" type="button">&larr;</button>
             </li>
             <li>
-                <button class="btn" type="button">&rarr;</button>
+                <button class="btn" id="btn-right" type="button">&rarr;</button>
             </li>
         </ul>
     </div>
